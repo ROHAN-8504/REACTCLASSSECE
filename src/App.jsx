@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react';
 import './App.css'
 import Card from '../Card'
+import Header from './Header';
 // import products from './products'
 function App() {
   const [product, setproduct] = useState([])
@@ -11,12 +12,10 @@ fetch("https://fakestoreapi.com/products")
 
   },[])
   
-
-
-
-  
   return (
   <>
+  <Header/>
+
   <div style={{display:"flex",
     gap:"50px",
     flexWrap:"wrap"
