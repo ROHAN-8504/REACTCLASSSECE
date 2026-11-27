@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './App.css'
 import Card from '../Card'
 // import products from './products'
 function App() {
   const [product, setproduct] = useState([])
-  fetch("https://desistore.stackrel.com/products")
+  useEffect(()=>{
+fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
   .then((products) => setproduct(products));
 
+  },[])
+  
+
+
+
+  
   return (
   <>
   <div style={{display:"flex",
